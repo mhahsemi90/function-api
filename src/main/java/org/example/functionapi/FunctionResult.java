@@ -3,14 +3,14 @@ package org.example.functionapi;
 import java.util.Map;
 
 public class FunctionResult {
-    private Map<String, Map<String,Object>> functionResultMap;
+    private Map<Long, Map<String,Object>> functionResultMap;
     private Map<String,Object> someParam;
 
-    public Map<String, Map<String, Object>> getFunctionResultMap() {
+    public Map<Long, Map<String, Object>> getFunctionResultMap() {
         return functionResultMap;
     }
 
-    public void setFunctionResultMap(Map<String, Map<String, Object>> functionResultMap) {
+    public void setFunctionResultMap(Map<Long, Map<String, Object>> functionResultMap) {
         this.functionResultMap = functionResultMap;
     }
 

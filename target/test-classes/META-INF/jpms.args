@@ -1,4 +1,0 @@
---patch-module
-org.example.functionapi=_
---add-reads
-org.example.functionapi=ALL-UNNAMED

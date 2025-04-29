@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public interface Function {
-    FunctionResult execute(FunctionDto functionDto, Map<String, Map<String, Object>> elementInputMap, Map<String, Object> shareInputMap);
+    FunctionResult execute(FunctionDto functionDto, Map<Long, Map<String, Object>> elementInputMap, Map<String, Object> shareInputMap);
 
     default List<String> argumentList() {
         return new ArrayList<>();
