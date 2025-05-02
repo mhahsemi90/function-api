@@ -22,4 +22,12 @@ public interface Function {
             throw new RuntimeException(e);
         }
     }
+    default String serializeValue(Object value){
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            return objectMapper.writeValueAsString(value);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
