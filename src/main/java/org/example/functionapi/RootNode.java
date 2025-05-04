@@ -6,9 +6,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.*;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class RootNode {
     private final JsonNode rootJsonNode;
@@ -56,10 +58,10 @@ public class RootNode {
         if (jsonNode == null) {
             throw new IllegalArgumentException("rootJsonNode is null");
         } else if (getType(jsonNode).contains(ExportType.ARRAY)) {
-            result = jsonNode
-                    .valueStream()
-                    .map(node -> new RootNode(node, objectMapper))
-                    .toList();
+            result = new ArrayList<>();
+            for (JsonNode node : jsonNode) {
+                result.add(new RootNode(node, objectMapper));
+            }
         } else {
             throw new RuntimeException(
                     "Cannot invoke \"toRootNodeList\" because \"" + jsonNode + "\" not Array"
@@ -76,7 +78,7 @@ public class RootNode {
         return toRootNodeList()
                 .stream()
                 .map(rootNode -> rootNode.toObject(aClass))
-                .toList();
+                .collect(Collectors.toList());
     }
 
     public <T> List<T> toObjectList(String fieldName, Class<T> aClass) {
@@ -251,6 +253,6 @@ public class RootNode {
                     ExportType.LONG,
                     ExportType.BIG_DECIMAL
             };
-        return Arrays.stream(result).toList();
+        return Arrays.stream(result).collect(Collectors.toList());
     }
 }
