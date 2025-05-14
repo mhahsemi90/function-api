@@ -126,7 +126,16 @@ public class RootNode {
     public String getStringValue(String fieldName) {
         return getValue(fieldName)
                 .map(this::textValue)
+                .map(this::writeValueAsString)
                 .orElse(null);
+    }
+
+    private String writeValueAsString(String s) {
+        try {
+            return objectMapper.writeValueAsString(s);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public String getStringValue() {
