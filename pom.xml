@@ -112,7 +112,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <useAgent>false</useAgent>
+                    <useAgent>true</useAgent>
                     <gpgExecutable>C:\Program Files (x86)\GnuPG\bin\gpg.exe</gpgExecutable>
                 </configuration>
             </plugin>
