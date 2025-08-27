@@ -6,6 +6,7 @@ import java.util.Set;
 public class FunctionDto {
     private String id;
     private String functionName;
+    private String versionFile;
     private Integer functionLevel;
     private Map<String, Object> argumentMap;
     private Set<String> outPutParameterCodeSet;
@@ -24,6 +25,14 @@ public class FunctionDto {
 
     public void setFunctionName(String functionName) {
         this.functionName = functionName;
+    }
+
+    public String getVersionFile() {
+        return versionFile;
+    }
+
+    public void setVersionFile(String versionFile) {
+        this.versionFile = versionFile;
     }
 
     public Integer getFunctionLevel() {
