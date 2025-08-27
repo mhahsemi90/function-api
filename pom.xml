@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.mhahsemi90</groupId>
-    <artifactId>function-api</artifactId>
     <name>function base module</name>
     <description>a base function interface for add dynamic module</description>
     <url>https://github.com/mhahsemi90/function-api</url>
-    <version>1.0</version>
+    <groupId>io.github.mhahsemi90</groupId>
+    <artifactId>function-api</artifactId>
+    <version>1.0.1</version>
 
     <licenses>
         <license>
@@ -27,8 +27,8 @@
 
     <developers>
         <developer>
-            <name>Mahdi Ahsemi</name>
-            <email>your-email@example.com</email> <!-- ایمیل خود را وارد کنید -->
+            <name>Mahdi Hashemi</name>
+            <email>mhahsemi90@google.com</email>
             <organization>GitHub</organization>
             <organizationUrl>https://github.com/mhahsemi90</organizationUrl>
         </developer>
@@ -81,8 +81,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <!-- پلاگین جاواداک -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -96,8 +94,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <!-- پلاگین GPG -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
@@ -113,11 +109,8 @@
                 </executions>
                 <configuration>
                     <useAgent>true</useAgent>
-                    <gpgExecutable>C:\Program Files (x86)\GnuPG\bin\gpg.exe</gpgExecutable>
                 </configuration>
             </plugin>
-
-            <!-- پلاگین استیجینگ با آدرس جدید -->
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
