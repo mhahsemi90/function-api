@@ -1,7 +1,9 @@
 org\example\functionapi\Function.class
 module-info.class
+org\example\functionapi\FunctionDto$Builder.class
 org\example\functionapi\FunctionResult.class
 org\example\functionapi\FunctionDto.class
 org\example\functionapi\RootNode.class
 org\example\functionapi\ExportType.class
 org\example\functionapi\DynamicWebClient.class
+org\example\functionapi\FunctionResult$Builder.class
