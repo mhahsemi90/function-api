@@ -1,3 +1,8 @@
+import org.paramcalc.functionapi.Function;
+import org.paramcalc.functionapi.FunctionDto;
+import org.paramcalc.functionapi.FunctionResult;
+import org.paramcalc.functionapi.RootNode;
+
 /**
  * The {@code org.example.functionapi} module defines the core API for dynamic function execution
  * and JSON data processing in a modular Java application.
@@ -34,15 +39,16 @@
  * FunctionResult result = function.execute(functionDto, elementInputMap, sharedInputMap);
  * </pre>
  *
- * @see org.example.functionapi.Function
- * @see org.example.functionapi.FunctionDto
- * @see org.example.functionapi.FunctionResult
- * @see org.example.functionapi.RootNode
+ * @see Function
+ * @see FunctionDto
+ * @see FunctionResult
+ * @see RootNode
  */
 module org.example.functionapi {
     requires com.fasterxml.jackson.databind;
     requires spring.webflux;
     requires reactor.core;
     requires spring.web;
-    exports org.example.functionapi;
+    exports org.paramcalc.functionapi;
+    exports org.paramcalc.functionapi.examples;
 }

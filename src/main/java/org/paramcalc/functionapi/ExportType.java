@@ -1,4 +1,4 @@
-package org.example.functionapi;
+package org.paramcalc.functionapi;
 
 /**
  * Enum representing the supported data types for JSON node value extraction.

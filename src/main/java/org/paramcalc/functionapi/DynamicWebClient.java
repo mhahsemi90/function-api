@@ -1,4 +1,4 @@
-package org.example.functionapi;
+package org.paramcalc.functionapi;
 
 import org.springframework.http.HttpMethod;
 import org.springframework.web.reactive.function.client.WebClient;

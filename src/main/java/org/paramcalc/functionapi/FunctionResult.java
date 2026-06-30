@@ -1,4 +1,4 @@
-package org.example.functionapi;
+package org.paramcalc.functionapi;
 
 import java.util.HashMap;
 import java.util.Map;

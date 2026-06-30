@@ -1,9 +1,10 @@
-package org.example.functionapi;
+package org.paramcalc.functionapi;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.*;
+import org.paramcalc.functionapi.examples.RootNodeUsageGuide;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -13,9 +14,11 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
- * A wrapper class for JSON navigation and value extraction from JsonNode structures.
- * Provides fluent API for traversing JSON nodes and converting them to various Java types.
- * Supports both direct node access and field-based navigation.
+ * A wrapper class for JSON navigation and value extraction.
+ *
+ * <p>For detailed usage examples, see {@link RootNodeUsageGuide}
+ *
+ * @see RootNodeUsageGuide
  */
 public class RootNode {
     private final JsonNode rootJsonNode;
