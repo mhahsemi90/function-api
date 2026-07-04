@@ -4,7 +4,7 @@ import org.paramcalc.functionapi.FunctionResult;
 import org.paramcalc.functionapi.RootNode;
 
 /**
- * The {@code org.example.functionapi} module defines the core API for dynamic function execution
+ * The {@code org.paramcalc.functionapi} module defines the core API for dynamic function execution
  * and JSON data processing in a modular Java application.
  *
  * <p>This module provides the foundational interfaces and classes for creating, executing,
@@ -28,7 +28,7 @@ import org.paramcalc.functionapi.RootNode;
  *
  * <p><b>Exported Packages:</b></p>
  * <ul>
- *   <li>{@code org.example.functionapi} - Core API interfaces and classes</li>
+ *   <li>{@code org.paramcalc.functionapi} - Core API interfaces and classes</li>
  * </ul>
  *
  * <p><b>Typical Usage:</b></p>
@@ -44,11 +44,11 @@ import org.paramcalc.functionapi.RootNode;
  * @see FunctionResult
  * @see RootNode
  */
-module org.example.functionapi {
-    requires com.fasterxml.jackson.databind;
-    requires spring.webflux;
-    requires reactor.core;
-    requires spring.web;
+module org.paramcalc.functionapi {
+    requires transitive com.fasterxml.jackson.databind;
+    requires transitive spring.webflux;
+    requires transitive reactor.core;
+    requires transitive spring.web;
     exports org.paramcalc.functionapi;
     exports org.paramcalc.functionapi.examples;
 }

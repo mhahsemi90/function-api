@@ -758,7 +758,8 @@ public class RootNodeUsageGuide {
 
     /**
      * <b>Summary of All Methods</b>
-     * <p>
+     * <br>
+     * <br>
      * <table border="1" style="border-collapse: collapse; width: 100%;">
      *   <caption>RootNode Methods Summary</caption>
      *   <thead>
